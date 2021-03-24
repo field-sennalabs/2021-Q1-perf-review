@@ -6,7 +6,14 @@ async function register(data) {
 }
 
 async function login(data) {
-  return await httpClient.get("auth/accessToken", data);
+  const response = await httpClient.post("auth/accessToken", data);
+  const { token } = response.data.data;
+  setAccessToken(token);
+  return response;
+}
+
+function setAccessToken(token) {
+  localStorage.setItem("senna:accessToken", token);
 }
 
 export default {

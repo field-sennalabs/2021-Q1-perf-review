@@ -22,7 +22,7 @@ function RegisterPage({
 }) {
   return (
     <div className={className}>
-      <div>
+      <div className="header">
         <h1>Register</h1>
       </div>
       <Formik
@@ -54,6 +54,10 @@ function RegisterPage({
 }
 
 const StyledRegisterPage = styled(RegisterPage)`
+  .header {
+    text-align: center;
+  }
+
   .form-wrapper {
     display: flex;
     flex-direction: column;
