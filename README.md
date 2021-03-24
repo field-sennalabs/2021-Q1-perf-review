@@ -40,6 +40,8 @@ Your objective is to build a fully functional web blog.
 ### 🔥🔥🔥 READ THIS FIRST 🔥🔥🔥
 - You can use JS library of your choices, It will not affect your score. (React, Material-UI, ant-design, etc.)
 - You can use CSS library of your choices, It will also not affect your score. (Bootstrap, TailwindCSS, Bulma, etc.)
+- The content editor must use [`react-rte`](https://react-rte.org/demo) to produce content in HTML.
+- The ugliness of your website will not affect your score, focus on the criteria above.
 
 ### Features
 
