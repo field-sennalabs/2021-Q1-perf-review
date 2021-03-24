@@ -10,7 +10,7 @@ export function withBlogsCreatePage(Component) {
 
     async function onSubmit(form) {
       try {
-        // await client.blogsClient.createBlog(form);
+        await client.blogsClient.createBlog(form);
       } catch (error) {
         // TODO: handle error
       }
