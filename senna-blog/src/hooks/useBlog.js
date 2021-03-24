@@ -6,7 +6,7 @@ function useBlog() {
   const { token } = useAuthen();
   const [data, setData] = useState([]);
 
-  function getBlog() {
+  function getBlogs() {
     axios
       .get(
         "https://us-central1-experiment-49e67.cloudfunctions.net/api/blogs?author&after"
@@ -34,7 +34,7 @@ function useBlog() {
 
   return {
     data,
-    getBlog,
+    getBlogs,
     createBlog,
   };
 }

@@ -8,10 +8,10 @@ import Blog from "../components/Blog";
 
 function HomePage({ className }) {
   const token = useAuthen();
-  const { data, getBlog } = useBlog();
+  const { data, getBlogs } = useBlog();
 
   useEffect(() => {
-    getBlog();
+    getBlogs();
   }, []);
 
   return (
