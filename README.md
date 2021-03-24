@@ -1,84 +1,70 @@
-# 2021-Q1-perf-review
+# Getting Started with Create React App
 
-| No. | Milestone/Goal | Scorecard | Percent |
-|---|---|---|---|
-| 1 | React | Use of best practice, well-known pattern and built-in functions to completed the project | 20 |
-| 2 | UI Implementation | HTML: Use of HTML5, no unneccessary tag and HTML structure, CSS: Use of medern CSS3 technique to build layout, Optimize nested selector and structure of overall CSS | 10 |
-| 3 | Coding Standard | Coding style by eslint, formatted by prettier, use of built-in functions and basic pattern such as early return | 5 |
-| 4 | Problem Solving | The progress of the project in a limited timeframe | 5 |
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
----
+## Available Scripts
 
-## How to submit a test
-1. Fork this repository to your account.
-2. Create branch `senna-blogs` and `cloud-budget`
-3. Work on a project, push your work to the branch as you see fit.
-4. When you are done, open **Pull Request** to **this** repository branch that match your.
+In the project directory, you can run:
 
-**Example**
+### `yarn start`
 
-you are done with `senna-blogs`, open **PR** from `youraccount/2021-Q1-perf-review:senna-blogs` to `field-sennalabs/2021-Q1-perf-review:senna-blogs`
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
----
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-## Abstraction
+### `yarn test`
 
-The test has 2 part
-1. to evaluate your skill in `React` using real-world-ish project.
-2. to evaluate your skill in `UI Implementation` by building HTML & CSS webpage from JPEG file.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
----
+### `yarn build`
 
-## 1. Senna Blogs
-Your objective is to build a fully functional web blog.
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-### Criteria
-1. React
-2. Coding Standard
-3. Problem Solving
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-### 🔥🔥🔥 READ THIS FIRST 🔥🔥🔥
-- You can use JS library of your choices, It will not affect your score. (React, Material-UI, ant-design, etc.)
-- You can use CSS library of your choices, It will also not affect your score. (Bootstrap, TailwindCSS, Bulma, etc.)
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### Features
+### `yarn eject`
 
-The web blog has 2 main features.
-1. Authentication
-2. Blogging
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-#### Authentication
-- User must be able to register.
-- User must be able to log in.
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-#### Blogging
-- User can see all the blogs.
-- User can see another user blogs.
-- User can create a blog.
-- User can only update their blog.
-- User can only delete their blog.
-- User can give hearts to the blog (Similar to *Medium*)
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-#### Resources
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-1. [Screen Flow](https://excalidraw.com/#json=6639873414922240,SXaai2oPry3Ieol_0J6gbg)
-2. [API Documentation](https://documenter.getpostman.com/view/13030838/TzCFhrJu)
+## Learn More
 
----
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-## 2. Cloud Budget Landing Page
-Your objective is to build a web page using only HTML & (S)CSS
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Criteria
-1. UI Implementation
-2. Coding Standard
-3. Problem Solving
+### Code Splitting
 
-### 🔥🔥🔥 READ THIS FIRST 🔥🔥🔥
-- ❌ The use of any library is **not allowed** (jQuery, Bootstrap, Bulma, etc.)
-- ✅ Only **CSS**, **SCSS**, **SASS** is allowed
-- ✅ You may use [`parcel`](https://parceljs.org/getting_started.html) to quickly initialize project.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-#### Features
-Use [CloudBudget Design on Figma](https://www.figma.com/file/UCBEZLssuNWXYG25DiAeng/CloudBudget-Freebie) to build a web page.
+### Analyzing the Bundle Size
 
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `yarn build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
