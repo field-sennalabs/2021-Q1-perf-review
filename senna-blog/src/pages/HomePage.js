@@ -3,12 +3,12 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 import { useAuthen } from "../hooks/useAuthen";
-import useBlog from "../hooks/useBlog";
+import { useBlogs } from "../hooks/useBlog";
 import Blog from "../components/Blog";
 
 function HomePage({ className }) {
   const token = useAuthen();
-  const { data, getBlogs } = useBlog();
+  const { data, getBlogs } = useBlogs();
 
   useEffect(() => {
     getBlogs();

@@ -2,10 +2,10 @@ import { Formik, Form, Field } from "formik";
 import RichTextEditor from "react-rte";
 import styled from "styled-components";
 
-import useBlog from "../hooks/useBlog";
+import { useBlogs } from "../hooks/useBlog";
 
 function CreatePage({ className }) {
-  const { createBlog } = useBlog();
+  const { createBlog } = useBlogs();
 
   function onSubmit(form) {
     createBlog({

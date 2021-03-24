@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useAuthen } from "./useAuthen";
 
-function useBlog() {
+export function useBlogs() {
   const { token } = useAuthen();
   const [data, setData] = useState([]);
 
@@ -38,5 +38,3 @@ function useBlog() {
     createBlog,
   };
 }
-
-export default useBlog;
