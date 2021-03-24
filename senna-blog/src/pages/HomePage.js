@@ -25,12 +25,14 @@ function HomePage({ className }) {
       </div>
 
       {data.map((blog) => (
-        <Blog
-          title={blog.title}
-          heartCount={blog.heartCount}
-          createdAt={blog.createdAt}
-          owner={blog.author.name}
-        />
+        <Link to={`/detail/${blog.slug}`}>
+          <Blog
+            title={blog.title}
+            heartCount={blog.heartCount}
+            createdAt={blog.createdAt}
+            owner={blog.author.name}
+          />
+        </Link>
       ))}
     </div>
   );

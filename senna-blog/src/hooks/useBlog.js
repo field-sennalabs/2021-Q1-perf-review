@@ -38,3 +38,28 @@ export function useBlogs() {
     createBlog,
   };
 }
+
+export function useBlog(slug) {
+  const { token } = useAuthen();
+  const [data, setData] = useState([]);
+
+  function getBlog() {
+    axios
+      .get(
+        `https://us-central1-experiment-49e67.cloudfunctions.net/api/blogs/${slug}`,
+        {
+          headers: {
+            Authorization: "Bearer " + token,
+          },
+        }
+      )
+      .then((response) => {
+        setData((prevData) => response.data.data);
+      });
+  }
+
+  return {
+    data,
+    getBlog,
+  };
+}

@@ -6,6 +6,7 @@ import HomePage from "./pages/HomePage";
 import CreatePage from "./pages/CreatePage";
 import RegisterPage from "./pages/RegisterPage";
 import LoginPage from "./pages/LoginPage";
+import DetailPage from "./pages/DetailPage";
 import { AuthenProvider } from "./hooks/useAuthen";
 
 import "./App.css";
@@ -17,6 +18,9 @@ function App() {
         <AppLayout>
           <Header />
           <Switch>
+            <Route path="/detail/:slug">
+              <DetailPage />
+            </Route>
             <Route path="/login">
               <LoginPage />
             </Route>
