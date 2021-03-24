@@ -1,8 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 
-function BlogsListPage() {
-  return <div>BlogListPage</div>;
+import { BlogHeader } from "../../components/BlogHeader";
+import { BlogList } from "../../components/BlogList";
+
+function BlogsListPage({ blogs, isCreateable }) {
+  return (
+    <div>
+      <BlogHeader title="Senna Blogs" isCreateable={isCreateable} />
+      <div>
+        <BlogList blogs={blogs} />
+      </div>
+    </div>
+  );
 }
 
 const StyledBlogsListPage = styled(BlogsListPage)``;
