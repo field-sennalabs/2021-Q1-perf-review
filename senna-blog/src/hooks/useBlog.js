@@ -1,16 +1,20 @@
+import { useState } from "react";
 import axios from "axios";
 import useAuthen from "./useAuthen";
 
 function useBlog() {
   const { getToken } = useAuthen();
-  console.log("token: ", getToken());
-  axios
-    .get(
-      "https://us-central1-experiment-49e67.cloudfunctions.net/api/blogs?author&after"
-    )
-    .then((response) => {
-      console.log(response);
-    });
+  const [data, setData] = useState([]);
+
+  function getBlog() {
+    axios
+      .get(
+        "https://us-central1-experiment-49e67.cloudfunctions.net/api/blogs?author&after"
+      )
+      .then((response) => {
+        setData((prevData) => response.data.data);
+      });
+  }
 
   function createBlog(form) {
     axios
@@ -29,7 +33,8 @@ function useBlog() {
   }
 
   return {
-    data: [],
+    data,
+    getBlog,
     createBlog,
   };
 }

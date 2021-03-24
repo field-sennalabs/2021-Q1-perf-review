@@ -1,10 +1,18 @@
+import { useEffect } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 import useAuthen from "../hooks/useAuthen";
+import useBlog from "../hooks/useBlog";
+import Blog from "../components/Blog";
 
 function HomePage({ className }) {
   const token = useAuthen();
+  const { data, getBlog } = useBlog();
+
+  useEffect(() => {
+    getBlog();
+  }, []);
 
   return (
     <div className={className}>
@@ -15,6 +23,15 @@ function HomePage({ className }) {
 
         {token && <Link to="/create">Create</Link>}
       </div>
+
+      {data.map((blog) => (
+        <Blog
+          title={blog.title}
+          heartCount={blog.heartCount}
+          createdAt={blog.createdAt}
+          owner={blog.author.name}
+        />
+      ))}
     </div>
   );
 }
