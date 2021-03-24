@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-import useAuthen from "../hooks/useAuthen";
+import { useAuthen } from "../hooks/useAuthen";
 import useBlog from "../hooks/useBlog";
 import Blog from "../components/Blog";
 

@@ -3,18 +3,15 @@ import { useHistory } from "react-router-dom";
 import { Formik, Form, Field } from "formik";
 import styled from "styled-components";
 
-import useAuthen from "../hooks/useAuthen";
+import { useAuthen } from "../hooks/useAuthen";
 
 function LoginPage({ className }) {
-  const { login, getToken } = useAuthen();
+  const { login, token } = useAuthen();
   const history = useHistory();
-  const token = getToken();
 
   function onSubmit(form) {
     login(form);
   }
-
-  console.log(token);
 
   useEffect(() => {
     if (token) {

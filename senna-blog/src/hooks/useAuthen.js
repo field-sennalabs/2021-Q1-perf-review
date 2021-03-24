@@ -1,13 +1,10 @@
+import { createContext, useContext, useState } from "react";
 import axios from "axios";
 
-function useAuthen() {
-  function setToken(data) {
-    localStorage.setItem("token", data);
-  }
+const AuthenContext = createContext({ token: localStorage.getItem("token") });
 
-  function getToken() {
-    return localStorage.getItem("token");
-  }
+export function AuthenProvider({ children }) {
+  const [token, setToken] = useState(null);
 
   function register(form) {
     axios
@@ -17,6 +14,7 @@ function useAuthen() {
       )
       .then((response) => {
         setToken(response.data.data.token);
+        localStorage.setItem("token", response.data.data.token);
       });
   }
 
@@ -28,14 +26,24 @@ function useAuthen() {
       )
       .then((response) => {
         setToken(response.data.data.token);
+        localStorage.setItem("token", response.data.data.token);
       });
   }
 
-  return {
+  function logout() {
+    setToken(null);
+  }
+
+  const value = {
     register,
+    logout,
     login,
-    getToken,
+    token,
   };
+
+  return (
+    <AuthenContext.Provider value={value}>{children}</AuthenContext.Provider>
+  );
 }
 
-export default useAuthen;
+export const useAuthen = () => useContext(AuthenContext);

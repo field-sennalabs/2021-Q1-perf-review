@@ -1,9 +1,9 @@
 import { useState } from "react";
 import axios from "axios";
-import useAuthen from "./useAuthen";
+import { useAuthen } from "./useAuthen";
 
 function useBlog() {
-  const { getToken } = useAuthen();
+  const { token } = useAuthen();
   const [data, setData] = useState([]);
 
   function getBlog() {
@@ -23,7 +23,7 @@ function useBlog() {
         form,
         {
           headers: {
-            Authorization: "Bearer " + getToken(),
+            Authorization: "Bearer " + token,
           },
         }
       )

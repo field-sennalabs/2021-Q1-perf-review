@@ -1,13 +1,12 @@
 import { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 
-import useAuthen from "../hooks/useAuthen";
+import { useAuthen } from "../hooks/useAuthen";
 import Container from "../components/Container";
 
 function AppLayout({ children }) {
-  const { history } = useHistory();
-  const { getToken } = useAuthen();
-  const token = getToken();
+  const history = useHistory();
+  const { token } = useAuthen();
 
   useEffect(() => {
     if (!token) {

@@ -1,14 +1,26 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
+import { useAuthen } from "../hooks/useAuthen";
+
 function Header({ className }) {
+  const { token, logout } = useAuthen();
+
   return (
     <div className={className}>
       <Link to="/">Home</Link>
-      <div>
-        <Link to="/register">Register</Link>
-        <Link to="/login">Login</Link>
-      </div>
+      {token ? (
+        <div>
+          <button type="button" onClick={logout}>
+            Logout
+          </button>
+        </div>
+      ) : (
+        <div>
+          <Link to="/register">Register</Link>
+          <Link to="/login">Login</Link>
+        </div>
+      )}
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import { Formik, Form, Field } from "formik";
 import styled from "styled-components";
 
-import useAuthen from "../hooks/useAuthen";
+import { useAuthen } from "../hooks/useAuthen";
 
 function RegisterPage({ className }) {
   const { register } = useAuthen();
